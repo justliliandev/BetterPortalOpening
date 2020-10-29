@@ -1,4 +1,4 @@
-package com.example.examplemod;
+package com.agnor99.better_portal_opening;
 
 import net.minecraft.block.PortalSize;
 import net.minecraft.enchantment.Enchantment;
