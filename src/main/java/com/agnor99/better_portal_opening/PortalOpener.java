@@ -6,6 +6,7 @@ import net.minecraft.enchantment.EnchantmentHelper;
 import net.minecraft.enchantment.Enchantments;
 import net.minecraft.entity.projectile.ArrowEntity;
 import net.minecraft.item.ItemStack;
+import net.minecraft.item.Items;
 import net.minecraft.util.Direction;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.BlockRayTraceResult;
@@ -49,7 +50,7 @@ public class PortalOpener {
             return;
         }
         ItemStack itemStack = leftClickBlockEvent.getItemStack();
-        if(itemStack.isEmpty() || !itemStack.isEnchanted()) {
+        if(itemStack.isEmpty() || !itemStack.isEnchanted() || itemStack.getItem().equals(Items.ENCHANTED_BOOK)) {
             return;
         }
         Map<Enchantment, Integer> enchantments = EnchantmentHelper.getEnchantments(itemStack);
