@@ -6,7 +6,7 @@ license="LGPL"
 issueTrackerURL="https://github.com/agnor99/BetterPortalOpening/issues" #optional
 [[mods]] #mandatory
 modId="better_portal_opening" #mandatory
-version="1.0" #mandatory
+version="1.1" #mandatory
 displayName="BetterPortalOpening" #mandatory
 # A file name (in the root of the mod JAR) containing a logo for display
 logoFile="examplemod.png" #optional
@@ -25,15 +25,8 @@ Light up your portal with a flame bow or a fire aspect sword
     # Does this dependency have to exist - if not, ordering below must be specified
     mandatory=true #mandatory
     # The version range of the dependency
-    versionRange="[34,)" #mandatory
+    versionRange="[37.1.1,38.0.0)" #mandatory
     # An ordering relationship for the dependency - BEFORE or AFTER required if the relationship is not mandatory
     ordering="NONE"
     # Side this dependency is applied on - BOTH, CLIENT or SERVER
-    side="BOTH"
-# Here's another dependency
-[[dependencies.better_portal_opening]]
-    modId="minecraft"
-    mandatory=true
-    versionRange="[1.16.3]"
-    ordering="NONE"
     side="BOTH"
