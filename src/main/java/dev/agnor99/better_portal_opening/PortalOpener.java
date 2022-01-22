@@ -2,6 +2,7 @@ package dev.agnor99.better_portal_opening;
 
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.projectile.AbstractArrow;
+import net.minecraft.world.entity.projectile.SpectralArrow;
 import net.minecraft.world.level.portal.PortalShape;
 import net.minecraft.world.item.enchantment.EnchantmentHelper;
 import net.minecraft.world.item.enchantment.Enchantments;
@@ -30,8 +31,8 @@ public class PortalOpener {
             && arrow.isOnFire()
             && event.getRayTraceResult() instanceof BlockHitResult hitResult
             && createPortal(arrow.level, hitResult.getBlockPos().relative(hitResult.getDirection()))) {
-
-            arrow.remove(Entity.RemovalReason.DISCARDED);
+            if (arrow instanceof Arrow || arrow instanceof SpectralArrow)
+                arrow.remove(Entity.RemovalReason.DISCARDED);
         }
     }
 
